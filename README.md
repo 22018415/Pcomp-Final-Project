@@ -43,7 +43,7 @@ We are also very interested in feminist related topics. As the female voice is o
 However, the idea was abandoned in view of the difficulty of distinguishing whether the sound sensor was a female voice or not.
 
 #### Idea 3
-During the discussion, we thought that the relationship between two people was something to think about and would also bring more variation to the piece. It occurred to us that the breath and temperature of two people could be shared to feed a plant, but considering that the change in the plant might not be obvious, we gave up this idea
+During the discussion, we thought that the relationship between two people was something to think about and would also bring more variation to the piece. It occurred to us that the breath and temperature of two people could be shared to feed a plant, but considering that the change in the plant might not be obvious, we gave up this idea.  
 **Input: CO2 sensor, temperature sensor; **  
 **Output : oxygen and water.**
 
