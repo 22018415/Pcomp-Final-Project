@@ -1,7 +1,5 @@
-
-
-/* Line 9-53 and Line 145-180 of the code was written by Yufei Ma
- *  Line 55-143 of the code was written by Yutian Wei
+/* Line 7-51 and Line 143-178 of the code was written by Yufei Ma
+ *  Line 53-141 of the code was written by Yutian Wei
  */
 
 
