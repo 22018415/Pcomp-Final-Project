@@ -269,7 +269,8 @@ On Wednesday we assembled the installation and shot a video showing the work.
 Done! Ta-da! 🥳🥳🥳  
   
   
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/119874724/206563996-57a0115f-334e-4733-be78-7d25742242d6.png">
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206574874-f817ef95-e61b-493b-b3b3-09e3b5342ba8.png">
+
 
 <h2 id="48">Reference</h2>  
   1.https://www.thingiverse.com/  
