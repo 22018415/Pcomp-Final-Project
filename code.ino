@@ -1,3 +1,11 @@
+
+
+/* Line 9-53 and Line 145-180 of the code was written by Yufei Ma
+ *  Line 55-143 of the code was written by Yutian Wei
+ */
+
+
+
 #include <Adafruit_Sensor.h>
 #include <Adafruit_NeoPixel.h>
 
