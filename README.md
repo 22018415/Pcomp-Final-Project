@@ -62,12 +62,12 @@ On 4 November we presented the proposal in class and Phoenix suggested that we t
 We bought two bmp180 air pressure sensors, two led rings, two PIR sensors from Amazon.  
   
   
-<img width="280" alt="image" src="https://user-images.githubusercontent.com/119874724/206531756-cdf7025f-a3c6-41b6-90df-6ab85905688b.png">
+<img width="380" alt="image" src="https://user-images.githubusercontent.com/119874724/206531756-cdf7025f-a3c6-41b6-90df-6ab85905688b.png">
 
 We soldered the existing sensors after the delivery arrived.  
   
   
-<img width="280" alt="image" src="https://user-images.githubusercontent.com/119874724/206529906-434ef63d-ec5f-4d73-9366-e96a2e5425f7.png">
+<img width="380" alt="image" src="https://user-images.githubusercontent.com/119874724/206529906-434ef63d-ec5f-4d73-9366-e96a2e5425f7.png">
 
 When writing the code we found that each BMP180 needed a separate I2C code bus. We could not simply connect two sensors at the same time or switch between them, as that would block the I2C bus. It also has only one, unchangeable address.
 After doing some research, we found that we could connect multiple BMP280s on the Arduino Uno via SPI, so we placed a new order for the BMP280.  
@@ -101,34 +101,170 @@ On Wednesday we downloaded 3d models of a lamp and a speaker and booked an intuc
 On Saturday we went to the 4d model shop in East London to buy the PVC pipes we needed, which did not look very good though. So instead we bought two microphone stands on Amazon that could be retracted in length. We also bought two funnels as plan B for the speakers in the shop, as well as blu tack and some wire.  
   
   
-<img width="280" alt="image" src="https://user-images.githubusercontent.com/119874724/206552181-4eaadd65-0c4f-4f9a-9506-7c956b548a34.png">
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/119874724/206552181-4eaadd65-0c4f-4f9a-9506-7c956b548a34.png">
   
 We then soldered the newly arrived bme 280 sensor, but found that the arduino did not recognise it when connected.   
   
   
-<img width="270" alt="image" src="https://user-images.githubusercontent.com/119874724/206555971-d3ac82d8-139a-42b7-8f3b-35b7f6a29221.png">  
+<img width="370" alt="image" src="https://user-images.githubusercontent.com/119874724/206555971-d3ac82d8-139a-42b7-8f3b-35b7f6a29221.png">  
 
 After searching we found that it was probably because the sensor needed to be connected to 3.3V, but we had accidentally connected 5V. We thought the sensor might have been damaged and bought two more bme 280 sensors from Amazon.  
 
 
-<img width="290" alt="image" src="https://user-images.githubusercontent.com/119874724/206556190-c95420b7-ca2d-4bb0-b211-12b94c9c6d53.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/119874724/206556190-c95420b7-ca2d-4bb0-b211-12b94c9c6d53.png">
 
 <h3 id="45">Week 8</h3>
 A week of experimenting with 3d printing.  
 We spent almost five days printing two lampshades. At first we used the mini printer, which failed three times.   
   
   
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/119874724/206556464-bbd9d28e-be7b-4e29-aeeb-0c17672b2a01.png">  
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/119874724/206556464-bbd9d28e-be7b-4e29-aeeb-0c17672b2a01.png">  
 
 Then we switched to a pursa i3 machine. We wanted to use white filament, but the white filament we had in the 3d  printing workshop was old and not sticky enough. So we switched to transparent filament and finally the two lampshades were printed successfully.  
   
 
-<img width="280" alt="image" src="https://user-images.githubusercontent.com/119874724/206556545-d9bc0618-2dc9-4f48-a600-e78c46a6dac0.png">  
+<img width="380" alt="image" src="https://user-images.githubusercontent.com/119874724/206556545-d9bc0618-2dc9-4f48-a600-e78c46a6dac0.png">  
 
 After connecting the new Bmp280 sensor, the arduino still gave us the error "I2C not found".   
-Peter suggested we try the Grove EMG detector. But if we used it we would need to attach it to the body, the thermal imaging sensor would be pointless and we would be missing an input, so we started looking for other sensors that could indicate breathing. 
-We found two sound-related sensors on the 5th floor, the analog sound sensor (volume recognition) and the speech sensor (voice recognition). After experimenting with the analog sound sensor, it was able to measure the breathing rate very well, so we modified the code to use this sensor instead. 
-![image](https://user-images.githubusercontent.com/119874724/206556294-cb6ec0af-7437-4e6d-8048-a4e23e9b5d63.png)
+Peter suggested we try the Grove EMG detector. But if we used it we would need to attach it to the body, the thermal imaging sensor would be pointless and we would be missing an input, so we started looking for other sensors that could indicate breathing.   
+  
+  
+<img width="390" alt="image" src="https://user-images.githubusercontent.com/119874724/206556802-de7728bf-4fce-4f06-ab21-779e04cdd431.png">
+
+We found two sound-related sensors on the 5th floor in Camberwell, the analog sound sensor (volume recognition) and the speech sensor (voice recognition). After experimenting with the analog sound sensor, it was able to measure the breathing rate very well, so we modified the code to use this sensor instead.   
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206557478-36854944-8fea-41f9-a242-bb3778bd4d51.png">  
+  
+  
+```
+pressureA = analogRead(0);
+Serial.print("pressureA:");
+Serial.println(pressureA);
+
+pressureB = analogRead(1);
+Serial.print("pressureB:");
+Serial.println(pressureB);
+```
+
+After deciding on the sensors to use, we tested the code.   
+The two inputs and the light were recognised, but neither of them worked consistently. After careful error checking we were still unable to solve the problem, so we made an appointment for a tutorial next Monday.  
+  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206557988-491b67c7-1d78-4718-9412-258f956118e5.png">
+
+The first horn failed 4 times in 3d printing and we continued to try to print.  
+  
+  <img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206558183-080b4935-b4cc-4a8e-bff7-28acf7aee77d.png">
+
+<h3 id="46">Week 9</h3>  
+
+#### Monday  
+Our first horn printed successfully on Monday!!🎉
+  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206559174-d6ae234c-368a-436b-967b-6fd09b9dfc97.png">
+
+When we tested the code we found that the values shown in the monitor did not work in a loop and sometimes even stopped completely.  
+Peter suggested that we comment out some code and print out our data in the serial monitor to test what was wrong. We found that the PIR sensor and sound sensor were fine, but the led ring was always on when the print light was off, which did not match our assumption that the light would flicker as people breathed, and we finally concluded that the problem was with the LED rings.  
+Matt helped us to call the example in libraries to test it and found that the LED was working fine. So we modified the code to write the function of the LED into loop, adding pixel.clear(); pixel.show(); . The light then worked properly. ✌️  
+  
+Then we started testing the DC motor and we found that it was not very easy to get two people to breathe at the same frequency. So we experimented a great deal and modified the set thresholds so that when two people breathed at the same frequency for three loops, the noise diminished. After a day of modifications, our installation was finally working as envisaged.   
+
+#### Tuesday  
+We found that when the two were breathing at the same frequency, the DC motor would not stop to make the noise disappear.   
+Peter told us that our resistors, transistors and other components were too close together and could be easily shorted, and that we could spread the resistors and other components out a bit to prevent accidental touching.   
+  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206560249-5002d851-3232-49b1-b24a-355679eaf352.png">  
+
+But after we reconnected them, the motor still wouldn't stop. So we considered using a servo instead of a DC motor. After the change to a servo, the installation was able to run successfully.  
+  
+<img width="402" alt="image" src="https://user-images.githubusercontent.com/119874724/206560488-216607d2-ac60-451e-bcd3-12cb092c6bde.png">
+
+  
+```
+if(cnt >= 3)
+{
+  delay(5000);
+  cnt =0 ;
+}
+
+else if(cnt < 3)
+{
+  for(pos = 0; pos <= 180; pos++)
+  {
+    myservoA.write(pos);
+    myservoB.write(pos);
+    delay(5);
+  }
+}
+```
+  
+We were going to solder the wires to the cavity board. As our two RIP sensors and two sound sensors need to be glued to the speaker of the shelf, we need to leave about 2m of wire connected to the arduino. And since each sensor has three connections, we soldered twelve 2m wires and planned to continue soldering the rest tomorrow.  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206561106-5f91ef75-0f48-4e53-b806-3ff87a9cabd3.png">
+
+#### Wednesday  
+We started printing the second horn and it failed about 5 times.  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206561504-00addab1-6be0-4821-b655-2975cf217aba.png">
+We soldered all the wires, but the arduino indicator did not light up when connected to the arduino. After modifying the soldering method, the code could be uploaded and run, but only one RIP sensor worked properly. So we sorted through the wires again and found that some of the wires were soldered incorrectly.  
+  
+#### Thursday  
+When the horn was almost finished printing, the filament was used up, so we had another print failure. As there was no more black filament in the studio that we wanted, we decided to hold off on printing for the time being.  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206562160-913735be-8c36-4908-9904-1c95b50039fe.png">
+
+
+After we finished modifying the wires, it still didn't light up when connected to the arduino, yet it would light up when unplugged. After consulting the instructor, we found that the circuit was shorted out. After cleaning up the excess solder, the circuit finally worked properly. But the value of one of the sound sensors kept getting very high and we checked the wires and found no problem.  
+  
+  
+<img width="393" alt="image" src="https://user-images.githubusercontent.com/119874724/206562524-359131d9-0b07-4b55-92aa-658571e66d33.png">
+
+Lexin helped us find a new black filament, so we started printing the second horn again（Might be the sixth time? 😭）
+
+#### Friday  
+The second horn was printed successfully.  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206562741-d158fb63-4243-424b-bb89-f49d67e83636.png">
+
+After assembling the components we showed our work to phoenix in class. However, one of the solders on one of the LED rings broke and one of the sound sensors still had a extreme high value. So basically only half of the installation was working. Phoenix suggested we change the servo to another form, so we planned to use speakers to make noise instead.  
+  
+
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206562941-726e8da8-13cf-48ce-9bd8-2eb5c9701efa.png">
+  
+In addition we plan to laser cut an acrylic box to hide the arduino board, the strip board and the mess of wires.
+
+
+<h3 id="47">Week 10</h3>  
+We first tested it with cardboard and then laser cut an acrylic box to fit the arduino and wires into:
+  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206563077-504a28c9-1ad9-4dea-902d-a61746a64c9e.png">  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206563427-fccbe3fb-8c7e-40dc-a5c9-e666ccc1327c.png">
+
+We removed the two servos and replaced them with a speaker as suggested by Phoenix, modified the code and it worked fine.  
+  
+  
+<img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206563138-52e51eb3-cf15-4bd9-aac9-ee64e6a8fbb4.png">  
+```
+if (cnt >= 3)
+{
+ tone(BUZZER, 0);
+ delay(5000);
+ cnt=0;
+}
+else if(cnt<3)
+{
+ digitalWrite(BUZZER,HIGH);
+ tone(BUZZER, 1000);
+ delay(100);          
+}        
+```
+
+
+
+
+
+
 
 
 
