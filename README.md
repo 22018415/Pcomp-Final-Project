@@ -54,7 +54,7 @@ We came up with Marina Abramović's The Artist Is Present: March - May 2010, a w
 We hoped that the work would encourage the participants to breathe in the same frequency, so we intended to set up a factor that would interfere when the pair did not breathe in the same frequency, and we came up with the idea of noise.
 
 #### Final Proposal - Breathe Like You
-(pdf link)
+https://docs.google.com/presentation/d/1omDfadEUTZ2S464tUnFpo7NIe_2jQXh4KxJjt8lTMqY/edit#slide=id.g17d7db4cf54_3_0
 We decided to build a device that uses barometric and infrared sensors to calculate the participants' breathing rate and reflect it in the brightness of the lamp. The greater the difference between their breathing rates, the stronger the sound of the noise from the DC motor vibrations, prompting the pair to approach each other's breathing rates. The noise disappears when the pair breathes at the same frequency.  
   
   
