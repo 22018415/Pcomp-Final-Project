@@ -7,7 +7,9 @@
   * [Week 6](#43)
   * [Week 7](#44)
   * [Week 8](#45)
-
+  * [Week 9](#46)
+  * [Week 10](#47)
+* [Reference](#48) 
 
 <h2 id="40">Introductinon</h2>
 Breathe Like You is an interactive art installation that reflects the relationship between two people based on their breathing rate.  
@@ -245,6 +247,7 @@ We removed the two servos and replaced them with a speaker as suggested by Phoen
   
   
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206563138-52e51eb3-cf15-4bd9-aac9-ee64e6a8fbb4.png">  
+
 ```
 if (cnt >= 3)
 {
@@ -258,7 +261,37 @@ else if(cnt<3)
  tone(BUZZER, 1000);
  delay(100);          
 }        
-```
+```  
+
+On Wednesday we assembled the installation and shot a video showing the work.
+Done! Ta-da! 🥳🥳🥳  
+  
+  
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/119874724/206563996-57a0115f-334e-4733-be78-7d25742242d6.png">
+
+<h2 id="48">Reference</h2>  
+  1.https://www.thingiverse.com/  
+    
+  2.https://www.zimoun.net/  
+    
+  3.https://www.blog.berrybase.de/blog/2020/11/09/neopixel-ring-mit-arduino-ansteuern-so-wirds-gemacht/  
+    
+  4.https://blog.csdn.net/qq_20553613/article/details/104833495  
+    
+  5.https://github.com/sparkfun/BMP180_Breakout/issues/2  
+    
+  6.http://cactus.io/hookups/sensors/barometric/bme280/hookup-arduino-to-multiple-bme280-barometric-pressure-sensors  
+  
+  7.https://www.youtube.com/watch?v=i_1yAJnbR9U  
+    
+  8.https://wiki.dfrobot.com/Analog_Sound_Sensor_SKU__DFR0034  
+  
+  9.https://www.tutorialspoint.com/arduino/arduino_dc_motor.htm  
+  
+  10.https://create.arduino.cc/projecthub/Rad_Silviu/speaker-with-arduino-be454c  
+  
+  
+
 
 
 
