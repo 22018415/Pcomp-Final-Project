@@ -203,7 +203,7 @@ else if(cnt < 3)
 }
 ```
   
-We were going to solder the wires to the cavity board. As our two RIP sensors and two sound sensors need to be glued to the speaker of the shelf, we need to leave about 2m of wire connected to the arduino. And since each sensor has three connections, we soldered twelve 2m wires and planned to continue soldering the rest tomorrow.  
+We were going to solder the wires to the cavity board. As our two PIR sensors and two sound sensors need to be glued to the speaker of the shelf, we need to leave about 2m of wire connected to the arduino. And since each sensor has three connections, we soldered twelve 2m wires and planned to continue soldering the rest tomorrow.  
   
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206561106-5f91ef75-0f48-4e53-b806-3ff87a9cabd3.png">
 
@@ -211,7 +211,7 @@ We were going to solder the wires to the cavity board. As our two RIP sensors an
 We started printing the second horn and it failed about 5 times.  
   
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206561504-00addab1-6be0-4821-b655-2975cf217aba.png">
-We soldered all the wires, but the arduino indicator did not light up when connected to the arduino. After modifying the soldering method, the code could be uploaded and run, but only one RIP sensor worked properly. So we sorted through the wires again and found that some of the wires were soldered incorrectly.  
+We soldered all the wires, but the arduino indicator did not light up when connected to the arduino. After modifying the soldering method, the code could be uploaded and run, but only one PIR sensor worked properly. So we sorted through the wires again and found that some of the wires were soldered incorrectly.  
   
 #### Thursday  
 When the horn was almost finished printing, the filament was used up, so we had another print failure. As there was no more black filament in the studio that we wanted, we decided to hold off on printing for the time being.  
