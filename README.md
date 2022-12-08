@@ -16,7 +16,7 @@ Breathe Like You is an interactive art installation that reflects the relationsh
 
 We use two PIR sensors and two analogue sound sensors as inputs, two led rings and a speaker as outputs to help two people feel the state they are in when they breathe at the same frequency.
 
-Here is a video of our project: https://youtu.be/TEn1UXd2_kI  
+📺 Here is a video of our project: https://youtu.be/TEn1UXd2_kI  
 
 <h2 id="41">Research Blog</h2>
 <h3 id="42">Week 5: Project Proposal</h3>
@@ -25,7 +25,7 @@ In the topic selection phase, we first sorted out the inputs and outputs that co
 **Input:** temperature, distance, light sensitivity, pressure, infrared thermography, buttons, time data, etc.  
 **Output:** changes in lights, object movement and rotation, changes in sound, visual screens, projection, etc.
 
-### Brain Storm
+### Brain Storm 🧠
 #### Idea 1: Curtains of Homeland -from Yutian
 As we have just come to live in London for a month or so, there is an eight hour jet lag between the UK and China. We thought about how we could use the installation to represent this distance in time and space from our family and friends. The idea was to use the time and light changes in China as input and transmit the data to London via the internet. And to create a curtain-like installation in London, where the arduino would control the oscillation of the cloth (using servos) and the lights based on the data from China. This breaks the 8-hour time difference and allows the audience to connect with their homeland on another level.
   
@@ -73,8 +73,8 @@ We soldered the existing sensors after the delivery arrived.
   
 <img width="380" alt="image" src="https://user-images.githubusercontent.com/119874724/206529906-434ef63d-ec5f-4d73-9366-e96a2e5425f7.png">
 
-When writing the code we found that each BMP180 needed a separate I2C code bus. We could not simply connect two sensors at the same time or switch between them, as that would block the I2C bus. It also has only one, unchangeable address.
-After doing some research, we found that we could connect multiple BMP280s on the Arduino Uno via SPI, so we placed a new order for the BMP280.  
+When writing the code we found that each BMP180 needed a separate I2C code bus. We could not simply connect two sensors at the same time or switch between them, as that would block the I2C bus. It also has only one, unchangeable address.  
+After doing some research 📒, we found that we could connect multiple BMP280s on the Arduino Uno via SPI, so we placed a new order for the BMP280.  
 At this point, the code was initially completed.  
 ```
  if(cnt >= 10000)
@@ -150,7 +150,7 @@ Serial.println(pressureB);
 ```
 
 After deciding on the sensors to use, we tested the code.   
-The two inputs and the light were recognised, but neither of them worked consistently. After careful error checking we were still unable to solve the problem, so we made an appointment for a tutorial next Monday.  
+The two inputs and the light were recognised, but neither of them worked consistently. After careful error checking we were still unable to solve the problem 👀, so we made an appointment for a tutorial next Monday.  
   
   
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/119874724/206557988-491b67c7-1d78-4718-9412-258f956118e5.png">
